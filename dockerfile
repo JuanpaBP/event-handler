@@ -1,10 +1,10 @@
-##Indica cual jdk usar
+##Esto le dice usamos jdk 17
 FROM amazoncorretto:17
-##Define el directorio de trabajo
+##aca van los archivos generados por la aplicación DENTRO del container
 WORKDIR /app
-##Copia el jar al directorio de trabajo
+##Aca agarramos el jar que esta en target y lo copiamos a app/ CON EL MISMO NOMBRE
 COPY target/event-handler-1.0-SNAPSHOT.jar /app/event-handler-1.0-SNAPSHOT.jar
-##Expone el puerto
+##Escuchar este puerto:
 EXPOSE 8080
-##Ejecuta la aplicacion
+##Ejecuta la aplicación
 ENTRYPOINT ["java", "-jar", "event-handler-1.0-SNAPSHOT.jar"]
