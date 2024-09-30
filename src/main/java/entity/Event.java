@@ -1,22 +1,20 @@
 package entity;
 
-import java.time.LocalDate;
-
 public class Event {
     //Define the Event class with fields like id, name, location, description, and date
     private Integer id;
     private String name;
     private String location;
     private String description;
-    private LocalDate startDate;
-    private LocalDate endDate;
+    private java.sql.Date startDate;
+    private java.sql.Date endDate;
     private Double price;
 
 
     public Event() {
     }
 
-    public Event(Integer id, String name, String location, String description, LocalDate startDate, LocalDate endDate, Double price) {
+    public Event(Integer id, String name, String location, String description, java.sql.Date startDate, java.sql.Date endDate, Double price) {
         this.id = id;
         this.name = name;
         this.location = location;
@@ -58,19 +56,19 @@ public class Event {
         this.description = description;
     }
 
-    public LocalDate getStartDate() {
+    public java.sql.Date getStartDate() {
         return startDate;
     }
 
-    public void setStartDate(LocalDate startDate) {
+    public void setStartDate(java.sql.Date startDate) {
         this.startDate = startDate;
     }
 
-    public LocalDate getEndDate() {
+    public java.sql.Date getEndDate() {
         return endDate;
     }
 
-    public void setEndDate(LocalDate endDate) {
+    public void setEndDate(java.sql.Date endDate) {
         this.endDate = endDate;
     }
 
