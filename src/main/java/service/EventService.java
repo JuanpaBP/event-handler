@@ -12,7 +12,8 @@ public class EventService {
     private final DBManager dbManager;
 
     // Constructor que recibe el DBManager
-    public EventService(DBManager dbManager) {//TODO: ESTE CONSTRUCTOR EXISTE ASÍ POR QUE ERA LA UNICA FORMA QUE TENIA DE HACER ANDAR LOS TESTS. Y NI SE QUE HACEN BIEN.
+    public EventService(DBManager dbManager) {//TODO: ESTE CONSTRUCTOR EXISTE ASÍ POR QUE ERA LA UNICA FORMA QUE TENIA DE HACER ANDAR LOS TESTS.
+        //Si logro hacer andar los tests sin necesidad de pasarle un DBManager, hay que hacerlo.
         this.dbManager = dbManager;
     }
 
