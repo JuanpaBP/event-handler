@@ -1,12 +1,24 @@
 package entity;
 
+import org.checkerframework.common.aliasing.qual.Unique;
+
+import javax.persistence.*;
+
+@Entity
+@Table(name = "Event", uniqueConstraints = @UniqueConstraint(columnNames = "id"))
 public class Event {
     //Define the Event class with fields like id, name, location, description, and date
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     private String name;
     private String location;
     private String description;
+
+    @Column(name = "start_date")
     private java.sql.Date startDate;
+    @Column(name = "end_date")
     private java.sql.Date endDate;
     private Double price;
 

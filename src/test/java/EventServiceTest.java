@@ -1,4 +1,4 @@
-import DBManager.DBManager;
+import configuration.DBManager;
 import entity.Event;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;

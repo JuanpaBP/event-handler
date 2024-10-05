@@ -1,13 +1,9 @@
-import DBManager.DBManager;
-import entity.Event;
+import configuration.DBManager;
 import service.EventService;
-
-import java.sql.Date;
-import java.util.List;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        //DBManager.initializeDatabase();
+        //configuration.initializeDatabase();
         DBManager dbManager = new DBManager();
         dbManager.initializeDatabase();
         EventService eventService = new EventService(dbManager);

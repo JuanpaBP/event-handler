@@ -1,4 +1,4 @@
-package DBManager;
+package configuration;
 
 import java.sql.*;
 

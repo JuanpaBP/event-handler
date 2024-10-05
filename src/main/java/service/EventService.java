@@ -1,6 +1,6 @@
 package service;
 
-import DBManager.DBManager;
+import configuration.DBManager;
 import entity.Event;
 
 import java.sql.*;
@@ -11,9 +11,9 @@ public class EventService {
 
     private final DBManager dbManager;
 
-    // Constructor que recibe el DBManager
+    // Constructor que recibe el configuration
     public EventService(DBManager dbManager) {//TODO: ESTE CONSTRUCTOR EXISTE ASÍ POR QUE ERA LA UNICA FORMA QUE TENIA DE HACER ANDAR LOS TESTS.
-        //Si logro hacer andar los tests sin necesidad de pasarle un DBManager, hay que hacerlo.
+        //Si logro hacer andar los tests sin necesidad de pasarle un configuration, hay que hacerlo.
         this.dbManager = dbManager;
     }
 
