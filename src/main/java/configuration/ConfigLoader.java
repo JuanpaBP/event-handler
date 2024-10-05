@@ -6,15 +6,15 @@ public class ConfigLoader {
 
     private static final Dotenv dotenv = Dotenv.load();
 
-    public String getDBUrl() {
+    public static String getDBUrl() {
         return dotenv.get("DB_URL");
     }
 
-    public String getDBUser(){
+    public static String getDBUser(){
         return dotenv.get("DB_USER");
     }
 
-    public String getPassword() {
+    public static String getPassword() {
         return dotenv.get("DB_PASSWORD");
     }
 

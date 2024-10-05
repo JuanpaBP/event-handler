@@ -21,7 +21,8 @@ public class ConfigLoaderTest {
     }
 
     @Test
-    public void shouldReturnDBPasswordWhenGetDB() {
-        String
+    public void shouldReturnDBPasswordWhenGetPasswordIsCalled() {
+        String dbPassword = configLoader.getPassword();
+        assertFalse(dbPassword.isEmpty());
     }
 }
