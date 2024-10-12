@@ -1,12 +1,14 @@
 import configuration.DBManager;
 import entity.Event;
 import org.mockito.Mock;
+import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import service.EventService;
 
 import java.sql.*;
+import java.util.List;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
@@ -29,7 +31,7 @@ public class EventServiceTest {
 
     private EventService eventService;
 
-    @BeforeMethod
+  /*  @BeforeMethod
     public void setUp() throws SQLException {
         MockitoAnnotations.openMocks(this);
         eventService = new EventService(dbManager);
@@ -77,9 +79,9 @@ public class EventServiceTest {
         assertEquals(actualEvent.getStartDate(), event.getStartDate());
         assertEquals(actualEvent.getEndDate(), event.getEndDate());
         assertEquals(actualEvent.getPrice(), event.getPrice());
-    }
+    }*/
 
-   /* @Test
+    /*@Test
     public void testFindAll() throws SQLException {
 
         //when(mockConnection.prepareStatement(any(String.class))).thenReturn(mockPreparedStatement);Con esta linea le test se clava????
@@ -169,6 +171,36 @@ public class EventServiceTest {
         assertEquals(savedEvent.getPrice(), eventToSave.getPrice());
     }*/
     //TODO: No puedo hacer andar el test de save.
+
+    /*@Test
+    public void testUpdateEventShouldReturnUpdatedEvent() throws SQLException {
+        int eventId = 1;
+
+        Event event = new Event();
+        event.setId(eventId);
+        event.setName("Loolapaloza");
+        event.setLocation("Córdoba");
+        event.setDescription("evento random");
+        event.setStartDate(Date.valueOf("2024-08-08"));
+        event.setEndDate(Date.valueOf("2024-08-09"));
+        event.setPrice(100.00);
+
+
+        Event eventWithNewData = new Event(1, "Evento update", "Tu vieja", "Evento actualizado", Date.valueOf("2025-08-08"), Date.valueOf("2025-08-09"), 300.0);
+
+        when(mockConnection.prepareStatement(any(String.class))).thenReturn(mockPreparedStatement);
+        Mockito.when(eventService.getById(1)).thenReturn(event);
+
+        event = eventService.update(eventWithNewData);
+        assertEquals(event.getId(), eventWithNewData.getId());
+        assertEquals(event.getName(), eventWithNewData.getName());
+        assertEquals(event.getDescription(), eventWithNewData.getDescription());
+        assertEquals(event.getLocation(), eventWithNewData.getLocation());
+        assertEquals(event.getStartDate(), eventWithNewData.getStartDate());
+        assertEquals(event.getEndDate(), eventWithNewData.getEndDate());
+        assertEquals(event.getPrice(), eventWithNewData.getPrice());
+
+    }*/
 
 
 }

@@ -3,7 +3,7 @@ package configuration;
 import java.sql.*;
 
 public class DBManager {
-    private String URL = "jdbc:mysql://localhost:3306/EventHandler";
+    /*private String URL = "jdbc:mysql://localhost:3306/EventHandler";
     private String USER = "root";  // Asegúrate de completar con tus credenciales
     private String PASSWORD = "Root21";  // Asegúrate de completar con tus credenciales
     private Connection connection;
@@ -92,7 +92,7 @@ public class DBManager {
             e.printStackTrace();
         }
     }
-
+*/
 
 
 

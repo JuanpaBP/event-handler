@@ -1,9 +1,16 @@
 package entity;
 
+import jdk.jfr.Enabled;
+
+import javax.persistence.*;
 import java.sql.Date;
 
+@Entity
+//@Table(name = "Event", uniqueConstraints = @UniqueConstraint(columnNames = "id"))
+@Table(name = "User")
 public class User {
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     private String firstName;
     private String lastName;

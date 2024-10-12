@@ -17,7 +17,7 @@ public class EventService {
         this.dbManager = dbManager;
     }
 
-    public Event save(Event event) {
+   /* public Event save(Event event) {
         String query = "INSERT INTO event (name, location, description, start_date, end_date, price) VALUES (?, ?, ?, ?, ?, ?)";
         Event eventResponse = null;
 
@@ -154,5 +154,5 @@ public class EventService {
         }
         return true; //Si se ejecuto y no rompío (no me importa si existía o no el valor) devuelvo true. Por que se me canta.
     }
-
+*/
 }

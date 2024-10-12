@@ -5,7 +5,8 @@ import org.checkerframework.common.aliasing.qual.Unique;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "Event", uniqueConstraints = @UniqueConstraint(columnNames = "id"))
+//@Table(name = "Event", uniqueConstraints = @UniqueConstraint(columnNames = "id"))
+@Table(name = "Event")
 public class Event {
     //Define the Event class with fields like id, name, location, description, and date
 
