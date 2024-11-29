@@ -92,4 +92,19 @@ public class Event {
     public void setPrice(Double price) {
         this.price = price;
     }
+
+    @Override
+    public boolean equals(Object o){
+        if (!(o instanceof Event))
+            return false;
+        if (o == this)
+            return true;
+        //if(((Event) o).getDescription() == this.description && ((Event) o).getId() == this.getId())
+        //    return true;
+        //else
+        //    return false;
+
+        //TODO: AGregar el resto del equals cuando ante bien los tests.
+        return false;
+    }
 }
